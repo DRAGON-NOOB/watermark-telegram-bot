@@ -22,7 +22,7 @@ def echo_all(message):
 @bot.message_handler(content_types=["photo"])
 def send_watermark(message):
     chat_id = message.chat.id
-    sent_message = bot.reply_to(message, 'Downloading...')
+    sent_message = bot.reply_to(message, 'Downloading😎')
     message_id = sent_message.message_id
     file = bot.get_file(message.photo[0].file_id)
     downloaded_file = bot.download_file(file.file_path)
@@ -33,7 +33,7 @@ def send_watermark(message):
     fname = getting_ready(__path)
     os.remove(__path)
     time.sleep(2)
-    bot.edit_message_text('Now, Uploading...', chat_id=chat_id, message_id=message_id)
+    bot.edit_message_text('Now, Uploading😍', chat_id=chat_id, message_id=message_id)
     for i in ('black', 'white'):
         __file = 'images/out/{}/{}'.format(i, fname)
         __photo = open(__file, 'rb')
